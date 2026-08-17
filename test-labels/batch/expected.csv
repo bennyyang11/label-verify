@@ -1,0 +1,9 @@
+filename,brand,class_type,abv,net_contents,producer,country_of_origin
+clean.png,Old Tom Distillery,Kentucky Straight Bourbon Whiskey,45%,750 mL,"Old Tom Distillery, Bardstown, KY",
+brand-case.png,Stone's Throw,,40%,750 mL,,
+wrong-abv.png,Old Tom Distillery,,45%,750 mL,,
+warning-titlecase.png,Old Tom Distillery,,45%,,,
+warning-reworded.png,Old Tom Distillery,,45%,,,
+glare-angle.png,Old Tom Distillery,,45%,750 mL,,
+import-country.png,Chateau Lumiere,,40%,700 mL,,France
+missing-abv.png,Sunny Hill Vineyards,,,750 mL,,
