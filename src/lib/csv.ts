@@ -9,15 +9,6 @@ import type { ApplicationData, FieldVerdict, VerificationResult } from "@/types"
  * uploaded image of the same name; the other columns are the claimed fields.
  */
 
-const FIELD_COLUMNS: (keyof ApplicationData)[] = [
-  "brand",
-  "classType",
-  "abv",
-  "netContents",
-  "producer",
-  "countryOfOrigin",
-];
-
 /** Accepts a few friendly header spellings → our ApplicationData keys. */
 const HEADER_ALIASES: Record<string, keyof ApplicationData> = {
   brand: "brand",
@@ -115,5 +106,3 @@ export function buildResultsCsv(
   });
   return Papa.unparse(data);
 }
-
-export { FIELD_COLUMNS };

@@ -45,5 +45,3 @@ export const ExtractedLabelSchema = z.object({
   // extractFields() filters this down to valid FieldKeys (see FIELD_KEYS).
   unreadableFields: z.array(z.string()),
 });
-
-export type ExtractedLabelOutput = z.infer<typeof ExtractedLabelSchema>;

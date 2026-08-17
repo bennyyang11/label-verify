@@ -99,7 +99,7 @@ ANTHROPIC_MODEL=claude-sonnet-4-6       # recommended — meets the ~5s target (
 > **No API key?** The app still runs in **mock mode** — every read returns a clearly-labeled sample extraction so you can click through the entire flow end to end. Real verification requires a key.
 
 ### Try it with the included fixtures
-With the dev server running, drag any image from `test-labels/batch/` onto the **Single** tab — or open the **Batch** tab, drop the whole `test-labels/batch/` folder, and attach `test-labels/batch/expected.csv`. Expected outcomes for each fixture are listed in that CSV and described under [QA](#qa).
+With the dev server running, drag any image from `test-labels/batch/` onto the **Single** tab — or open the **Batch** tab, drop the whole `test-labels/batch/` folder, and attach `test-labels/batch/expected.csv`. That CSV holds the application values for each fixture; the behavior each fixture exercises is described under [QA](#qa).
 
 ### Other commands
 ```bash
@@ -119,7 +119,7 @@ npm run lint        # lint
 Two layers of testing:
 
 - **Unit tests** (`npm test`) cover the comparison engine for every scenario (`src/lib/compare/*.test.ts`) — lenient brand/type/ABV/net-contents matching and the strict government-warning checks (wording, ALL-CAPS, bold, buried text). These run with no API key.
-- **End-to-end fixtures** in `test-labels/` are a controlled set of generated labels — one behavior each: clean pass, ABV mismatch, title-case warning, reworded warning, glare/rotation, accented import + country of origin, ABV-exempt wine, and a front/back split (warning on the back). `test-labels/batch/expected.csv` holds the application values and expected verdict for each. With a real API key, every fixture produces the verdict noted there.
+- **End-to-end fixtures** in `test-labels/` are a controlled set of generated labels — one behavior each: clean pass, ABV mismatch, title-case warning, reworded warning, glare/rotation, accented import + country of origin, ABV-exempt wine, and a front/back split (warning on the back). `test-labels/batch/expected.csv` holds the application values for each. With a real API key, every fixture reproduces the behavior it's named for.
 
 ## Approach & key decisions
 
